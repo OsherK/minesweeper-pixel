@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minesweeper!</title>
+</head>
+
+<body onload="init()" oncontextmenu="return false">
+    <div class="instructions">
+        <h1>Instructions:</h1>
+        <p>Use the left click to uncover a spot(beware of the mines!) and the right click to mark spots you suspect to be mines.</p>
+        <p>once all mines have been marked and all empty spots uncovered, you win!</p>
+        <h3>Difficulties:</h3>
+        <ul>There are 4 difficulties:
+            <li>Easy: 4x4 Board with 2 mines</li>
+            <li>Normal: 8x8 Board with 12 mines</li>
+            <li>Hard: 12x12 Board with 30 mines</li>
+            <li>Manual: 12x12 Board and you place mines manually, click it again to start the game</li>
+        </ul>
+        <h3>Hints:</h3>
+        <p>You can use a hint 3 times by clicking on one of the lighbulbs</p>
+        <p>After you use one, your next click will reveal the spot you chose and all those around it, without triggering any bombs!</p>
+        <p>They will be hidden again after a second, so pay attention!</p>
+        <h3>Safe Click</h3>
+        <p>Will mark a spot that does not have a mine for a couple of seconds.</p>
+    </div>
+    <div class="modal">
+        <p id="modalText"></p>
+        <button class="undo" onclick="undo()">Undo</button>
+    </div>
+    <div class="container">
+        <div class="containerTop">
+            <div class="stats">
+                <div class="highscore">Highscores:</div>
+                <div class="lives"></div>
+                <div class="timer"></div>
+                <div class="hints"></div>
+                <button class="safe" onclick="safeClick()">Safe clicks left: 3</button><br>
+                <button onclick="setDifficulty(0)" class="difficulty">Easy</button>
+                <button onclick="setDifficulty(1)" class="difficulty">Normal</button>
+                <button onclick="setDifficulty(2)" class="difficulty">Hard</button>
+                <button onclick="setDifficulty(3)" class="difficulty">Manual</button>
+            </div>
+            <button class="restart" onclick="restart()">Restart</button>
+        </div>
+        <table class="board">
+    </div>
+
+    </table>
+    <script src="js/hints.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/mines.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

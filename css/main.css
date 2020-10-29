@@ -1,0 +1,165 @@
+body,
+html {
+    color: white;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+html {
+    background-image: url('../img/background.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.instructions {
+    overflow: hidden;
+    text-align: center;
+    font-size: 1.2em;
+    position: relative;
+    top: 5%;
+    left: 2%;
+    border: 5px solid black;
+    height: 90%;
+    width: 40%;
+    float: left;
+    background-image: linear-gradient(to bottom right, rgb(79, 109, 243), rgb(51, 51, 206), rgb(12, 12, 78), rgb(1, 1, 17));
+}
+
+.cell {
+    border: 2px solid darkgreen;
+    height: 30px;
+    width: 30px;
+    background: url("../img/grass.jpg");
+}
+
+.cell:hover {
+    background-image: radial-gradient( lawngreen, green);
+}
+
+img {
+    height: 30px;
+    width: 30px;
+}
+
+.container {
+    position: relative;
+    top: 5%;
+    right: 2%;
+    border: 5px solid black;
+    height: 90%;
+    width: 40%;
+    float: right;
+    background-image: linear-gradient(to bottom right, rgb(79, 109, 243), rgb(51, 51, 206), rgb(12, 12, 78), rgb(1, 1, 17));
+    object-fit: contain;
+}
+
+.clickedBomb,
+.clickedBomb:hover {
+    background-image: linear-gradient(to bottom right, red, darkred);
+}
+
+.board {
+    text-shadow: 1px 1px 4px blue;
+    font-size: 2em;
+    position: relative;
+    top: 2%;
+    left: 10%;
+    border: 5px solid black;
+    height: 500px;
+    width: 80%;
+}
+
+.hints img {
+    height: 10%;
+    width: 8%;
+}
+
+.restart {
+    width: 10%;
+    position: relative;
+    font-size: 2rem;
+    border: 0px;
+    top: 5px;
+    left: 40%;
+    background-color: transparent;
+}
+
+.stats {
+    position: relative;
+    top: 1%;
+    left: 10px;
+    width: 95%;
+}
+
+.timer {
+    text-align: center;
+    background-color: rgb(72, 153, 180);
+    position: relative;
+    bottom: 50px;
+    left: 30%;
+    border: 2px solid black;
+    width: 20%;
+    height: 5%;
+    float: right;
+}
+
+.lives {
+    position: relative;
+    top: 10px;
+    height: 10%;
+    text-align: center;
+    width: 22%;
+}
+
+.lives img {
+    height: 50px;
+    width: 50px;
+}
+
+.highscore {
+    width: 30%;
+    font-size: 2em;
+    float: right;
+    position: relative;
+    right: 15%;
+    top: 20px;
+}
+
+.safeClick {
+    background-image: linear-gradient(to bottom right, blue, white);
+}
+
+.difficulty {
+    width: 10%;
+    height: 25px;
+    margin-top: 10px;
+}
+
+.safe {
+    font-size: 1em;
+    border: 2px solid grey;
+    background-color: lightblue;
+}
+
+ul {
+    margin: 0px auto;
+    width: 50%;
+}
+
+.modal {
+    text-align: center;
+    box-sizing: border-box;
+    position: absolute;
+    background-image: linear-gradient(to bottom right, rgb(79, 109, 243), rgb(51, 51, 206), rgb(12, 12, 78), rgb(1, 1, 17));
+    border: 2px solid red;
+    left: 44%;
+    top: 40%;
+    width: 13%;
+    padding: 20px 0px;
+    z-index: 1;
+}
+
+.revealed {
+    background-image: linear-gradient(to bottom right, darkgreen, green, white);
+}
